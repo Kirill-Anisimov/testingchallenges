@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load shuffle %}
+
+{% block content %}
+
+    <ul>
+        {% for item in results_list|shuffle %}
+            <li><a href={{item.path}}>{{item.value}}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
