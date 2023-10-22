@@ -3,11 +3,16 @@
 {% load shuffle %}
 
 {% block content %}
-
-    <ul>
-        {% for item in results_list|shuffle %}
-            <li><a href={{item.path}}>{{item.value}}</a></li>
-        {% endfor %}
-    </ul>
+<div class="container">
+    <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+        <ul class="list-group list-group-horizontal list-unstyled">
+            {% for item in results_list|shuffle %}
+            <div class="p-2 m-2">
+                <li><a class="btn btn-dark btn-lg" href={{item.path}} role="button">{{item.value}}</a></li>
+            </div>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 
 {% endblock %}

@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="ie=edge">
-    <title>Testing Tasks</title>
+
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+
+    <title>Testing Challenges</title>
   </head>
-  <body bgcolor="cyan">
+  <body style="background-color: #8c92ac;">
     {% block content %}
     {% endblock %}
   </body>
