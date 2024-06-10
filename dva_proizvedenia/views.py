@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
 
 def home(request):
 	return render(request, "home.html")
+
 
 def proizvedenie(request):
 	k = 1
@@ -23,8 +23,17 @@ def proizvedenie(request):
 
 	return render(request, "result.html", result)
 
+
 def uspeh(request):
 	return render(request, "uspeh.html")
 
+
 def neudacha(request):
-	return render(request, "neudacha.html")
+	try:
+		user_agent = request.META["HTTP_SEC_CH_UA"]
+		if "Google Chrome" in user_agent:
+			return render(request, "neudacha_chrome.html")
+		else:
+			return render(request, "neudacha_other.html")
+	except KeyError:
+		return render(request, "neudacha_other.html")
