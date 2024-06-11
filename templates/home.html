@@ -3,44 +3,22 @@
 {% block content %}
 <div class="container">
     <main>
-        <div class="py-5 text-left">
-            <h2>Задание №1</h2>
-            <p class="lead">Вам на тестирование сдали программу, схему которой вы видите ниже. Требования будущий
-                пользователь программы сформулировал следующие:</p>
-            <p class="lead">Программа принимает на вход два значения А и Б. Программа выполняет расчёт 2-х произведений
-                А*Б и (А-К)*(Б+К). Программа выводит на экран подсчитанные произведения следующим случайным образом:
-                Либо А*Б слева и (А-К)*(Б+К) справа. Либо А*Б справа и (А-К)*(Б+К) слева.
-                Пользователь выбирает то значение которое по его мнению соответствует произведению А*Б.
-                Если пользователь выбрал правильное значение то программа показывает окно с поздравлениями. Если
-                пользователь выбрал неправильное значение, то программа показывает окно с сожалениями.
-            </p>
-        </div>
-
         <div class="row g-5">
             <div class="col-md-7 col-lg-8">
-                <h4 class="mb-3">Введите число А и число Б</h4>
                 <form action="proizvedenie">
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="numberOne" class="form-label">Число А</label>
                             <input type="text" name="num1" class="form-control" id="numberOne">
-                            <div class="invalid-feedback">
-                                Valid first name is required.
-                            </div>
                         </div>
 
-                        <div class="col-sm-6">
-                            <label for="numberTwo" class="form-label">Число Б</label>
+                        <div class="col-sm-5">
+                            <label for="numberTwo" class="form-label"><strong>Число Б</strong></label>
                             <input type="text" name="num2" class="form-control" id="numberTwo">
-                            <div class="invalid-feedback">
-                                Valid last name is required.
-                            </div>
                         </div>
                     </div>
 
-                    <p></p>
-
-                    <button class="w-100 btn btn-dark btn-lg" type="submit">Отправить</button>
+                    <button class="w-100 btn btn-dark btn-lg mt-2" type="submit">Отправить</button>
                 </form>
             </div>
         </div>
