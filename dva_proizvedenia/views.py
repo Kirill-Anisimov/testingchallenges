@@ -46,6 +46,8 @@ def uspeh(request):
 def neudacha(request):
 	try:
 		user_agent = request.META["HTTP_SEC_CH_UA"]
+		# Когда пользователь выбирает неправильное произведение
+		# Во всех браузерах кроме Google Chrome будет ошибка 404
 		if "Google Chrome" in user_agent:
 			return render(request, "neudacha_chrome.html")
 		else:
